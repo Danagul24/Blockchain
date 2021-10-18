@@ -1,0 +1,42 @@
+<script src="../models.ts"></script>
+<app-top-bar></app-top-bar>
+
+<div *ngFor = "let category of categories">
+  <div *ngIf = "selectedCategoryId == category.id" class= "categoryItem">
+      <div>
+        <img [src]=category.url class="coffeeImage">
+      </div>
+      <div class = "coffeeInfo">
+        <h2>{{category.title}}</h2>
+        <p>{{category.description}}</p>
+        <button (click)="goBack()">Back</button>
+      </div>
+  </div>
+</div>
+  <div class = "orderItem">
+    <div class="orderInfo">
+      <h2>Make Order</h2>
+      <p>Choose number of boxes
+        <input type="number" #amountBoxes></p>
+      <p>Write your name
+      <input type="text" #name></p>
+      <p>Write your surname
+      <input type="text" #surname> </p>
+      <p>Write address
+      <input type="text" #address></p>
+      <p>Write your mobile number
+      <input type="text" #mobile></p>
+      <button (click)="makeOrder()">Order</button>
+      <p *ngIf="!loaded"><b> Deduction from an account...</b></p>
+    </div>
+      <div>
+        <img src="https://www.wiecomex.com/uploads/8/7/3/8/8738749/editor/wholesale-coffee-beans-brazil.jpeg?1488294593" alt="" height="320px">
+      </div>
+    </div>
+  <div *ngIf = "!show">
+    <h2>Your orders:</h2>
+    <p>{{categoryName}}</p>
+    <p>{{amountBoxes.valueAsNumber}} boxes</p>
+    <p>Delivery date: {{date.getDay()}} {{date.getMonth()}} {{date.getFullYear()}}</p>
+    <button (click)="checkStatus()" class = "status">Check Status</button>
+  </div>

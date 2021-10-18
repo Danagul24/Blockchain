@@ -1,0 +1,15 @@
+<app-top-bar></app-top-bar>
+
+<div>
+  <ul *ngIf="loaded">
+    <div *ngFor="let category of categories" class="category">
+      <img [src] = "category.url" width="500px" height="400px" class="image">
+          <h2>{{category.title}}</h2>
+          <a routerLink="/categories/{{category.id}}">
+            <button class="button">Buy</button>
+          </a>
+    </div>
+</ul>
+<p *ngIf="!loaded">Loading category list...</p>
+</div>
+

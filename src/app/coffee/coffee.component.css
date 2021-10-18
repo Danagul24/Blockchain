@@ -1,0 +1,42 @@
+.coffeeImage{
+  width:500px;
+  border-style: ridge;
+  border-color: lightgray;
+}
+.categoryItem{
+  display: flex;
+  justify-content: left;
+  background: sandybrown;
+  height: 300px;
+}
+.coffeeInfo{
+  width: 500px;
+  margin-left: 50px;
+}
+h2{
+  font-family: "ChunkFive Roman";
+}
+p{
+  font-family: "Bookman Old Style";
+}
+.orderItem{
+  display: flex;
+  justify-content: right;
+  background: antiquewhite;
+}
+.orderInfo{
+  margin-right: 20px;
+}
+button {
+  border-style: none;
+  border-radius: 3px;
+  height: 30px;
+  width: 70px;
+  background-color: #333333;
+  color: lightgray;
+  font-family: Monospaced;
+  font-size: 17px;
+}
+.status{
+  width: 120px;
+}
