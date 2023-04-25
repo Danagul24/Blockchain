@@ -14,10 +14,10 @@
   margin-left: 50px;
 }
 h2{
-  font-family: "ChunkFive Roman";
+  font-family: "ChunkFive Roman", serif;
 }
 p{
-  font-family: "Bookman Old Style";
+  font-family: "Bookman Old Style", serif;
 }
 .orderItem{
   display: flex;
@@ -34,9 +34,13 @@ button {
   width: 70px;
   background-color: #333333;
   color: lightgray;
-  font-family: Monospaced;
+  font-family: Monospaced, serif;
   font-size: 17px;
 }
 .status{
   width: 120px;
+}
+.order {
+  width: 300px;
+  margin:  0 50%;
 }

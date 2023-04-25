@@ -4,7 +4,7 @@
 <div *ngFor = "let category of categories">
   <div *ngIf = "selectedCategoryId == category.id" class= "categoryItem">
       <div>
-        <img [src]=category.url class="coffeeImage">
+        <img [src]=category.url  alt="" class="coffeeImage">
       </div>
       <div class = "coffeeInfo">
         <h2>{{category.title}}</h2>
@@ -33,10 +33,10 @@
         <img src="https://www.wiecomex.com/uploads/8/7/3/8/8738749/editor/wholesale-coffee-beans-brazil.jpeg?1488294593" alt="" height="320px">
       </div>
     </div>
-  <div *ngIf = "!show">
+  <div *ngIf = "!show" class="order">
     <h2>Your orders:</h2>
     <p>{{categoryName}}</p>
     <p>{{amountBoxes.valueAsNumber}} boxes</p>
-    <p>Delivery date: {{date.getDay()}} {{date.getMonth()}} {{date.getFullYear()}}</p>
+    <p>Delivery date: {{this.date}}</p>
     <button (click)="checkStatus()" class = "status">Check Status</button>
   </div>

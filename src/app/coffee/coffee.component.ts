@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Category, Order} from "../models";
+import {Component, OnInit} from '@angular/core';
+import {Category} from "../models";
 import {ActivatedRoute} from "@angular/router";
 import {CategoryService} from "../services/category.service";
 import {Location} from "@angular/common";
@@ -58,11 +58,15 @@ export class CoffeeComponent implements OnInit {
       this.loaded= true;
       this.date = new Date();
       this.date.setDate(this.date.getDate() + 14);
-      alert("Your order will be delivered on " + this.date.getDay()+"."+this.date.getMonth()+"."+ this.date.getFullYear() +
-            "\n Check your email for additional information");
+      alert("Your order will be delivered on " + this.date+
+        "\n Check your email for additional information");
     }, 2000);
+
     this.show = false;
   }
+
+
+
   checkStatus(){
     var items = ['send', 'on the way', 'delivered to the stock'];
     status = items[Math.floor(Math.random() * items.length)];
